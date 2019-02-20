@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+  <style>
+  body {
+    position: relative; 
+  }
+  .affix {
+    top:0;
+    width: 100%;
+    z-index: 9999 !important;
+  }
+  .navbar {
+    margin-bottom: 0px;
+  }
+
+  .affix ~ .container-fluid {
+    position: relative;
+    top: 50px;
+  }
+    
+  #section1 {
+    padding-top:50px;
+    height:auto;
+    color: #fff; 
+    background-color: black;
+  }
+    
+  #section2 {
+    padding-top: 50px; 
+    height:auto; 
+    color: #fff; 
+    
+  }
+    
+  #section3 {
+    padding-top:50px;
+    height: auto;
+    color: #fff; 
+    background-color: black;
+  }
+    
+ 
+  </style>
+
+  <div class="container-fluid" style="background-color:black; color:#fff;">
+    <h1>Welcome in four page mobile friendly responsive website</h1>
+    <h2>It's Image Gallery Page</h2>
+   
+  </div>
+
+  <nav id="nav" class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+        <a class="navbar-brand" href="index.html">FourPageWebSite</a>
+      </div>
+      <div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="imagegallery.html">Image Gallery</a></li>
+            <li><a href="imagegrid.html">Image Grid</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+           
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    
+  <img src="images/web1.jpg" class="img-responsive" > 
+ 
+  <div id="section1" class="container-fluid">
+   <div class="container">
+  <h2 style="text-align: center; font-size: 40px; padding-bottom: 5px;">Image Gallery </h2>
+    
+    
+     
+  
+  <div class="row">
+  
+  
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/web1.jpg" target="_blank">
+          <img src="images/web1.jpg" alt="Lights" style="width:100%; " >
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/web1.jpg" target="_blank">
+          <img src="images/web1.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/web1.jpg" target="_blank">
+          <img src="images/web1.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+      
+      <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/web1.jpg" target="_blank">
+          <img src="images/web1.jpg" alt="Lights" style="width:100%; " >
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/web1.jpg" target="_blank">
+          <img src="images/web1.jpg" alt="Nature" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="thumbnail">
+        <a href="images/web1.jpg" target="_blank">
+          <img src="images/web1.jpg" alt="Fjords" style="width:100%">
+          <div class="caption">
+            <p>Lorem ipsum donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+      
+      
+  </div>
+</div>
+      
+      
+    
+   
+    
+    
+    <script>
+    $("#nav ul li a[href^='#']").on('click', function(e) {
+
+   // prevent default anchor click behavior
+   e.preventDefault();
+
+   // store hash
+   var hash = this.hash;
+
+   // animate
+   $('html, body').animate({
+       scrollTop: $(hash).offset().top
+     }, 1000, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+});
+    </script>
+</body>
+
+</html>
